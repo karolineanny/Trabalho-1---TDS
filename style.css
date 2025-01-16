@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', serif;
+}
+.all-content{
+background: #D9CBAE;
+}
+html::-webkit-scrollbar-track{
+background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+background: #A68A6B;
+border-radius: 10px;
+}
+html::-webkit-scrollbar{
+width: 10px;
+}
+/* navbar */
+#navbar{
+background-color: #D9CBAE;
+font-family: 'Montserrat', sans-serif;
+}
+#logo img{
+width: 50px;
+margin-left: 20px;
+}
+.navbar-nav{
+margin-left: 50px;
+}
+.nav-item .nav-link{
+color: white;
+margin-left: 10px;
+transition: 0.5s;
+}
+.nav-item .nav-link:hover{
+background: white;
+border-radius: 5px;
+color: black;
+}
+#navbar form button{
+background: #A68A6B;
+color: white;
+border: 1px solid #A68A6B;
+}
+/* navbar */
+/* home content */
+#home{
+  width: 100%;
+  height: 90vh;
+  background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./assets/homepage3.jpg);
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Montserrat', serif;
+}
+.content{
+padding-top: 210px;
+margin-left: 56px;
+}
+.content h3{
+font-size: 50px;
+color: white;
+}
+.content p{
+margin-top: 10px;
+color: white;
+}
+#btn{
+width: 150px;
+height: 36px;
+margin-top: 20px;
+background: white;
+border-radius: 5px;
+font-weight: bold;
+border: none;
+transition: 0.5s ease;
+cursor: pointer;
+}
+#btn:hover{
+background: #A68A6B;
+color: white;
+}
+/* home content */
+/* footer */
+#footer .redes-sociais i {
+  margin-right: 10px; 
+}
+#footer .copyright{
+  color: white; 
+}
+html{
+scroll-behavior: smooth;
+}
