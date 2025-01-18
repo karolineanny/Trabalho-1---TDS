@@ -5,45 +5,50 @@
   font-family: 'Montserrat', serif;
 }
 .all-content{
-background: #D9CBAE;
+  background: #D9CBAE;
 }
 html::-webkit-scrollbar-track{
-background: transparent;
+  background: transparent;
 }
 
 html::-webkit-scrollbar-thumb{
-background: #A68A6B;
-border-radius: 10px;
+  background: #A68A6B;
+  border-radius: 10px;
 }
 html::-webkit-scrollbar{
-width: 10px;
+  width: 10px;
 }
 /* navbar */
 #navbar{
-background-color: #D9CBAE;
-font-family: 'Montserrat', sans-serif;
+  background-color: #D9CBAE;
+  font-family: 'Montserrat', sans-serif;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 999; 
+  transition: top 0.3s; 
 }
 #logo img{
-width: 50px;
-margin-left: 20px;
+  width: 50px;
+  margin-left: 20px;
 }
 .navbar-nav{
-margin-left: 50px;
+  margin-left: 50px;
 }
 .nav-item .nav-link{
-color: white;
-margin-left: 10px;
-transition: 0.5s;
+  color: white;
+  margin-left: 10px;
+  transition: 0.5s;
 }
 .nav-item .nav-link:hover{
-background: white;
-border-radius: 5px;
-color: #A68A6B;
+  background: white;
+  border-radius: 5px;
+  color: #A68A6B;
 }
 #navbar form button{
-background: #A68A6B;
-color: white;
-border: 1px solid #A68A6B;
+  background: #A68A6B;
+  color: white;
+  border: 1px solid #A68A6B;
 }
 #navbar form button:hover {
   background: white;
@@ -51,6 +56,10 @@ border: 1px solid #A68A6B;
   border: 1px solid white;
 }
 /* navbar */
+
+body {
+  padding-top: 70px; 
+}
 
 /* home */
 #home{
@@ -64,84 +73,135 @@ border: 1px solid #A68A6B;
   font-family: 'Montserrat', serif;
 }
 .content{
-padding-top: 210px;
-margin-left: 56px;
+  padding-top: 210px;
+  margin-left: 56px;
 }
 .content h3{
-font-size: 50px;
-color: white;
+  font-size: 50px;
+  color: white;
 }
 .content p{
-margin-top: 10px;
-color: white;
+  margin-top: 10px;
+  color: white;
 }
 #btn{
-width: 150px;
-height: 36px;
-margin-top: 20px;
-background: transparent;
-border: 2px solid white;
-color: white;
-border-radius: 5px;
-transition: 0.5s;
-cursor: pointer;
+  width: 200px;
+  height: 36px;
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
 }
 #btn:hover{
-background: white;
-color: #A68A6B;
+  background: white;
+  color: #A68A6B;
 }
 /* home */
 
 /* sobre-nos */
 #sobre-nos{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; 
   background: #FFFAF0;
   font-family: 'Montserrat', sans-serif;
+  padding: 60px 0;
 }
+
 #sobre-nos .container{
-  padding-top: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
 .heading{
   text-align: center;
   margin-bottom: 50px;
   color: #A68A6B;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 2em;
+  font-weight: 500;
 }
+
+.subheading{
+  color: #A68A6B;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-top: -60px;
+}
+
+.text-custom-green {
+  color: #D9CBAE;
+}
+
+#sobre-nos p {
+  color: #A68A6B;
+}
+
+#sobre-nos h3 {
+  color: #A68A6B;
+}
+
 #sobre-nos .card{
   border-radius: 10px;
-  width: 80%;
+  overflow: hidden;
 }
+
 #sobre-nos .card img{
   border-radius: 10px;
+  transition: transform 0.3s;
 }
-#sobre-nos-btn{
-  width: 200px;
-  height: 36px;
-  background: transparent;
-  border: 2px solid #A68A6B;
+
+#sobre-nos .card img:hover{
+  transform: scale(1.05);
+}
+
+.valores-list{
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.valores-list li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
   color: #A68A6B;
-  border-radius: 5px;
-  font-weight: medium;
-  transition: 0.5s;
-  cursor: pointer;
 }
-#sobre-nos-btn:hover{
-  background: #A68A6B;
-  color: white;
+
+.valores-list li i{
+  color: #D9CBAE; 
+  transition: color 0.3s;
 }
-#sobre-nos h3 {
-  color:#A68A6B;
+
+.valores-list li:hover i{
+  color: #D9CBAE;
 }
-#sobre-nos p {
-  color:#A68A6B;
+
+@media (max-width: 768px) {
+  #sobre-nos .content {
+    padding: 20px;
+  }
+
+  .heading{
+    font-size: 1.75rem;
+  }
+
+  .subheading{
+    font-size: 1.5rem;
+  }
+
+  .valores-list li{
+    font-size: 0.95rem;
+  }
 }
 
 /* cardapio */
 #cardapio {
   padding: 50px 0;
   background-color: #FFFAF0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #cardapio .heading {
@@ -149,12 +209,13 @@ color: #A68A6B;
   font-size: 2.5rem;
   color: #A68A6B;
   margin-bottom: 40px;
+  font-weight: 500;
 }
 
 #cardapio .categoria h2 {
   font-size: 2rem;
   color: #A68A6B;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 30px;
   margin-top: 30px; 
 }
@@ -196,13 +257,291 @@ color: #A68A6B;
   font-weight: bold;
 }
 
+/* Galeria */
+#galeria {
+  background-color: white; 
+  padding: 50px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#galeria .galeria-heading {
+  margin-bottom: 35px;
+  font-size: medium;
+}
+
+#galeria .galeria-heading h2 {
+  color: #A68A6B; 
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+#galeria .galeria-heading p {
+  color: #A68A6B; 
+  font-size: 1.2rem;
+}
+
+#galeria .galeria-carousel {
+  margin-bottom: 30px;
+}
+
+#galeria .galeria-carousel .carousel-inner {
+  min-height: 400px;
+}
+
+#galeria .galeria-carousel .carousel-inner img {
+  width: 100%;       
+  height: auto;      
+  object-fit: cover; 
+  max-height: 600px; 
+}
+
+#galeria .galeria-button {
+  background-color: #A68A6B;
+  color: #A68A6B;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #A68A6B;
+  transition: 0.5s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#galeria .galeria-button:hover {
+  background-color: #8B7560; 
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #galeria .galeria-heading h2 {
+    font-size: 2rem;
+  }
+
+  #galeria .galeria-heading p {
+    font-size: 1rem;
+  }
+
+  #galeria .galeria-carousel .carousel-inner img {
+    height: 250px;
+  }
+
+  #galeria .galeria-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Contato */
+#contato {
+  background-color: #FFFAF0;
+  padding: 50px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#contato .section-title {
+  text-align: center;
+  color: #A68A6B;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight:500;
+}
+
+#contato .contato-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#contato .contato-form .form-label {
+  color: #A68A6B;
+  font-weight: 500;
+}
+
+#contato .contato-form .form-control,
+#contato .contato-form .form-select {
+  border: 2px solid #A68A6B;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border-color 0.3s;
+}
+
+#contato .contato-form .form-control:focus,
+#contato .contato-form .form-select:focus {
+  border-color: #8B7560;
+  box-shadow: none;
+}
+
+#contato .contato-form .form-check-input {
+  margin-top: 0.3rem;
+}
+
+#contato .contato-form .form-check-label {
+  color: #A68A6B;
+  margin-left: 0.3rem;
+}
+
+#contato .contato-form .btn-primary {
+  background-color: #A68A6B;
+  background: transparent;
+  color: #A68A6B;
+  border: 2px solid #A68A6B;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+#contato .contato-form .btn-primary:hover {
+  background-color: #8B7560;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #contato .section-title {
+    font-size: 2rem;
+  }
+
+  #contato .contato-form {
+    padding: 0 20px;
+  }
+
+  #contato .contato-form .btn-primary {
+    width: 100%;
+  }
+}
+
+/* Horário de Atendimento */
+#horario {
+  background-color: white;
+  padding: 60px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#horario .table {
+  border: 1px solid #A68A6B; 
+  border-radius: 10px; 
+}
+
+#horario .table th,
+#horario .table td {
+  border: 1px solid #A68A6B;
+  color: #A68A6B;
+}
+
+#horario .heading {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #A68A6B;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#horario .table-responsive {
+  margin-top: 20px;
+}
+
+#horario .table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#horario .table thead th {
+  background-color: #D9CBAE;
+  color: white;
+  font-weight: 500;
+}
+
+#horario .table tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+#horario .btn-primary {
+  background-color: #A68A6B;
+  border-color: #A68A6B;
+}
+
+#horario .btn-primary:hover {
+  background-color: #8B7560;
+  border-color: #8B7560;
+}
+/* Horário de Atendimento */
+
+/* Onde Estamos */
+
+#onde-estamos {
+  background-color: white;
+}
+
+.titulo-pagina {
+  font-size: 2.5rem;
+  color: #A68A6B;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.endereco {
+  font-size: 1.25rem;
+  color: #A68A6B;
+  margin-bottom: 30px;
+}
+
+.mapa-responsive {
+  position: relative;
+  padding-bottom: 56.25%; 
+  padding-top: 30px; 
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 50px; 
+  background-color: white;
+}
+
+.mapa-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .titulo-pagina {
+      font-size: 2.5rem;
+  }
+  
+  .endereco {
+      font-size: 1rem;
+  }
+  
+  #horario .heading {
+      font-size: 1.75rem;
+  }
+  
+  .mapa-responsive {
+      padding-top: 20px;
+  }
+}
+
 /* footer */
+#footer {
+  background-color: #A68A6B; 
+  padding: 20px 0; 
+}
 #footer .redes-sociais i {
   margin-right: 10px; 
+  font-size: 1.5rem; 
 }
 #footer .copyright{
   color: white; 
+  margin-top: 10px; 
 }
 html{
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
